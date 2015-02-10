@@ -1,0 +1,21 @@
+public class FibonacciIterative {
+
+	static int fib(int n)
+	{
+		int[] fib = new int[n+1];
+		fib[0]=0;
+		fib[1] =1;
+		
+		for(int j=2; j<=n; j++)
+			fib[j] = fib[j-1] + fib[j-2];
+		return fib[n];
+	}
+	
+	public static void main(String[] args)
+	{
+		System.out.println((int)Math.pow(2, 31) -1);
+		System.out.println((int)Math.pow(2, 30));
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(fib(77));
+	}
+}

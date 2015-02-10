@@ -1,0 +1,62 @@
+public class MergeSort{
+	
+    private int[] b;
+
+	public int[] mergeSort(int[] input){
+		if(input == null || input.length ==0 ) {
+			return input;
+		}
+
+		b = new int[input.length];
+		return splitData(input, 0, input.length);
+	}
+
+	private int[] splitData(int[] input, int low, int high) {
+		if(low >= high) return;
+		int mid = (low + high) /2;
+		splitData(input, low, mid);
+		splitData(input, mid+1, high);
+        merge(input, low, mid, high);
+        return b;
+	}
+
+	private void merge(int input, int low, int mid, int high){
+		int i= low;
+		int j = mid;
+		int k= low;
+
+		while (i <= mid && j< high) {
+			if (a[i] > input[j]) {
+				b[k] = input[j];
+				j++;
+			}
+			else {
+				b[k] = input[i];
+				i++;
+			}
+			k++;
+		}
+
+		while(i!= mid+1) {
+			b[k] = a[i];
+			i++;
+			k++;
+		}
+
+		while(j!= high) {
+			b[k] = a[j];
+			j++;
+			k++;
+		}
+	}
+
+
+	public static void main(String[] args) {
+		int a[] = new int[] {8,4,3,2,5};
+		int[] sortedOuput = mergeSort(a);
+
+		for(int i=0; i< sortedOutput.length; i++) {
+			System.out.print(sortedOutput[i] + " ");
+		}
+	}
+}

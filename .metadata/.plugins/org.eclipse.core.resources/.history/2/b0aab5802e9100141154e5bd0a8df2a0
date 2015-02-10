@@ -1,0 +1,14 @@
+
+public class PermutationString {
+
+	static void printPermutation(String word)
+	{
+		printPermutation(word, "");
+	}
+	
+	
+	public static void main(String[] args)
+	{
+		printPermutation("ABC");
+	}
+}

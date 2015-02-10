@@ -1,0 +1,7 @@
+public class MaxLinesOnScreen {
+
+	private int getUnoccupiedScreenLines(int screenSize, int[] sectionLength)
+	{
+		return 0;
+	}
+}
