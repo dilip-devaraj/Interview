@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class ArraySortLength {
+
+	public static void main(String[] args) {
+		String[] array = new String[3];
+		array[0] = "Tom";
+		array[1] = "Dick";
+		array[2] = "Array";
+		
+		Arrays.sort(array);
+		
+		print(array);
+	}
+	
+	public static print(String[] array)
+	{
+		for(String s: array){
+			System.out.println(s);
+		}
+	}
+}
