@@ -14,7 +14,6 @@ public class LongestIncreasingSubsequence {
 			dp[i] = 1;
 			parent[i] = i;
 		}
-
 		
 		for(int i=1; i< numbers.length; i++){
 			for(int j=0; j<i; j++) {

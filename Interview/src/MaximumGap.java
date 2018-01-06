@@ -45,7 +45,13 @@ public class MaximumGap {
 	}
 	
 	public static void main(String[] args) {
-		int[] nums = new int[] {5,8,34,12,2,55,78,41};
+		
+		int[] nums = new int[Integer.MAX_VALUE/16];
+		for(int i=0; i<Integer.MAX_VALUE/16; i++){
+			nums[i] = i+1;
+		}
+		System.out.println(System.currentTimeMillis());
 		System.out.println(maximumGap(nums));
+		System.out.println(System.currentTimeMillis());
 	}
 }
