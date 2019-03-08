@@ -1,7 +1,11 @@
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.Stack;
 
 public class ComparatorTest implements Comparator<Integer>{
 	
@@ -23,8 +27,17 @@ public class ComparatorTest implements Comparator<Integer>{
 	while(! q.isEmpty()){
 		System.out.println(q.poll());
 	}
+
+	Integer a[] = new Integer[]{1,2,3};
+	List<Integer> listInt = new ArrayList<>(Arrays.asList(a));
 	
+	listInt.toArray(a);
+	System.out.println(Arrays.toString(a));
+	
+	System.out.println(Integer.MAX_VALUE);
+	
+	Iterator<Integer> it = listInt.iterator();
+	
+	Stack<Character> st = new Stack<>();
 	}
-
-
 }
