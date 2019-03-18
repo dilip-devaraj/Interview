@@ -19,6 +19,7 @@ public class MaxConsecutiveOnes3 {
             }
             max = Math.max(max, j-i+1); // everytime we get here, the current window is valid 
         }
+        
         return max;
     }
 
